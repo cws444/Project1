@@ -1,0 +1,33 @@
+<html>
+<head>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <title>Mastermind</title>
+</head>
+<body>
+  <h1>Mastermind</h1>
+  <div id="instructions">
+    <h2>How to Play:</h2>
+    <p>You get one small <b>black</b> peg for a guess of the right colour in the right location and one small white peg for a guess of of the right colour but in the wrong position.</p>
+    <p>The relative locations of the scoring (small black &amp; white) pegs does not necessarily reveal which pegs in your guess are correct.</p>
+    <p><br><b>Level of Difficulty:</b></p>
+    <div class="radio">
+      <input id="easy" type="radio" name="level" value="1">
+      <label for="easy">Easy</label>
+      <input id="normal" type="radio" name="level" value="2">
+      <label for="normal">Normal</label>
+      <input id="hard" type="radio" name="level" value="3">
+      <label for="hard">Hard</label>
+      <a href="#" class="playBtn" onclick="selectLevel();">Let's Play!</a>
+    </div>
+  </div>
+  <input id="btnGuess" class="playBtn" value="DeCode" disabled="disabled" onclick="update()" type="button">
+  <input id="btnReset" class="playBtn" value="Reset" onclick="reset()" type="button"><br>
+  <canvas id="board-easy" height="416" width="160"></canvas>
+  <canvas id="board-normal" height="520" width="200"></canvas>
+  <canvas id="board-hard" height="624" width="240"></canvas>
+</body>
+</html>
